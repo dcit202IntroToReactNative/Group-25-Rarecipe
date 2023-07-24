@@ -100,6 +100,18 @@ const styles = StyleSheet.create({
       top: 0,
       backgroundColor: '#fff', // Add background color to the header to avoid overlapping with notifications
     },
+    button: {
+        paddingVertical: 8,
+        paddingHorizontal: 8,
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: '#000',
+        alignItems: 'center',
+      },
+      buttonText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+      },
 });
 
 export default NotificationsView;
