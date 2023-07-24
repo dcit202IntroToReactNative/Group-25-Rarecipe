@@ -142,6 +142,14 @@ const styles = StyleSheet.create({
       notificationIcon: {
         marginRight: 10,
       },
+      notificationDetails: {
+        flex: 1,
+        marginRight: 10,
+      },
+      notificationTitle: {
+        fontSize: 16,
+        fontWeight: 'bold',
+      },
 });
 
 export default NotificationsView;
