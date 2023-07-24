@@ -1,66 +1,115 @@
-import React from 'react';
-import { View, Text, Image, TextInput, StyleSheet } from 'react-native';
+import React, { Component } from "react";
+import { StyleSheet, Text, View, TextInput, Image, TouchableOpacity } from "react-native";
+import Ic_filter from "../../assets/ic_filter.svg";
+import Ic_search from "../../assets/ic_search.svg";
 
-const WelcomingSection = () => {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.greetingText}>Welcome to our App!</Text>
-            <Text style={styles.greeting2Text}>Explore amazing recipes and more.</Text>
-            <View style={styles.profileImageContainer}>
-                <Image
-                    style={styles.profileImage}
-                    source={require('../../assets/profile_photo.jpeg')}
-                />
+class WelcomeSection extends Component {
+    render() {
+        return (
+            <View style={styles.container}>
+                <View style={styles.firstRow}>
+                    <View style={styles.greetingsContainer}>
+                        <Text style={styles.greeting}>Hello Denna,</Text>
+                        <Text style={styles.greeting2}>What are you cooking today?</Text>
+                    </View>
+                    <Image
+                        style={styles.profileImage}
+                        source={require("../../assets/profile_photo.jpeg")}
+                    />
+                </View>
+                <View style={styles.secondRow}>
+                    <View style={styles.searchInputContainer}>
+                        <Ic_search style={styles.searchIcon} />
+                        <TextInput
+                            style={styles.searchInput}
+                            placeholder="Search for recipes"
+                        />
+                    </View>
+                    <TouchableOpacity
+                        style={styles.filterButton}
+                        onPress={() => alert("Filter")}
+                    >
+                        <Ic_filter style={styles.filterIcon} />
+                    </TouchableOpacity>
+                </View>
             </View>
-            <TextInput
-                style={styles.searchView}
-                placeholder="Search for recipes"
-                placeholderTextColor="#bbb"
-            />
-            {/* The filter button image should be imported and used here */}
-        </View>
-    );
-};
+        );
+    }
+}
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#fff',
-        paddingTop: 20,
-        paddingHorizontal: 30,
+        flex: 1,
+        backgroundColor: "#fff",
+        marginStart: 25,
+        marginEnd: 25,
+        marginTop: 40,
     },
-    greetingText: {
-        fontFamily: 'poppins_semibold',
+    firstRow: {
+        flexDirection: "row",
+        marginBottom: 27,
+        justifyContent: "space-between",
+    },
+    greetingsContainer: {
+        marginTop: 5,
+        display: "flex",
+    },
+    greeting: {
+        textAlign: "left",
+        fontWeight: "bold",
         fontSize: 24,
-        color: '#111',
     },
-    greeting2Text: {
-        color: '#666',
-        height: 17,
-        marginTop: 8,
+    greeting2: {
+        textAlign: "left",
+        fontSize: 18,
     },
-    profileImageContainer: {
+    profileImage: {
         width: 60,
         height: 60,
         borderRadius: 30,
-        overflow: 'hidden', // This makes the container circular
-        marginTop: 45,
-        marginRight: 35,
+        borderColor: "#000",
+        borderWidth: 0,
+        marginTop: 1,
     },
-    profileImage: {
-        width: '100%',
-        height: '100%',
-        resizeMode: 'cover', // This ensures the image fills the container
+    secondRow: {
+        flexDirection: "row",
+        justifyContent: "space-between",
     },
-    searchView: {
-        width: 255,
+    searchInputContainer: {
+        height: 'auto',
+        flexDirection: "row",
+    },
+    searchIcon: {
+        alignSelf: "center",
+        marginEnd: 10,
+        width: 20,
+        height: 20,
+    },
+    searchInput: {
+        width: '75%',
         height: 40,
-        marginTop: 30,
-        marginBottom: 8,
-        paddingLeft: 40,
-        borderRadius: 20,
-        backgroundColor: '#f0f0f0',
-        color: '#222',
+        borderRadius: 12,
+        borderColor: "#ccc",
+        borderWidth: 1,
+        backgroundColor: "#fff",
+        padding: 10,
+    },
+    filterButton: {
+        width: 40,
+        height: 40,
+        borderRadius: 10,
+        backgroundColor: "#772F5E",
+        borderColor: "#fff",
+        borderWidth: 1,
+        padding: 10,
+        alignItems: "center",
+        marginEnd: 10,
+    },
+    filterIcon: {
+        width: 20,
+        height: 20,
+        alignSelf: "center",
     },
 });
 
-export default WelcomingSection;
+export default WelcomeSection;
