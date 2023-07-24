@@ -9,14 +9,16 @@ import NavigationBar from './MiniComponents/NavigationBar';
 
 const HomeLayout = () => {
     return (
-        <ScrollView style={styles.container}>
-            <WelcomeSection />
-            <TrendingSection />
-            <PopularCategory />
-            <RecentSection />
-            <PopularCreators />
-        </ScrollView>
-        <NavigationBar />
+        <View style={styles.container}>
+            <ScrollView>
+                <WelcomeSection />
+                <TrendingSection />
+                <PopularCategory />
+                <RecentSection />
+                <PopularCreators />
+            </ScrollView>
+            <NavigationBar />
+        </View>
     );
 };
 

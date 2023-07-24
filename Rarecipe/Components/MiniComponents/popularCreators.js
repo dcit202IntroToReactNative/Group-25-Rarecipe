@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     container: {
         paddingVertical: 12,
         marginTop: 10,
+        marginBottom: 90,
     },
     popularCreatorsText: {
         fontSize: 25,
