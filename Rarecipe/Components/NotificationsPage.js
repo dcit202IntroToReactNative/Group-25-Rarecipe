@@ -49,5 +49,41 @@ const NotificationsView = () => {
     categoryText = 'All Notifications';
     categoryTextColor = '#128'; // White text color for other buttons
   }
-
+  return (
+    <View style={styles.container}>
+      <View style={styles.buttonsContainer}>
+        <TouchableOpacity
+          style={[styles.button, { width: buttonWidth, marginHorizontal: '2%' }]}
+          onPress={() => handleButtonPress('all')}
+        >
+          <Text style={[styles.buttonText, activeButton === 'all' && styles.activeButtonText]}>All</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.button, { width: buttonWidth, marginHorizontal: '2%' }]}
+          onPress={() => handleButtonPress('read')}
+        >
+          <Text style={[styles.buttonText, activeButton === 'read' && styles.activeButtonText]}>Read</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.button, { width: buttonWidth, marginHorizontal: '2%' }]}
+          onPress={() => handleButtonPress('unread')}
+        >
+          <Text style={[styles.buttonText, activeButton === 'unread' && styles.activeButtonText]}>Unread</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.categoryContainer}>
+        <View style={styles.category}>
+          <Text style={[styles.categoryTitle, { color: categoryTextColor }]}>{categoryText}</Text>
+          <FlatList
+            data={notificationDataToShow}
+            renderItem={renderNotificationItem}
+            keyExtractor={(item) => item.id}
+            contentContainerStyle={styles.notificationList}
+          />
+        </View>
+      </View>
+    </View>
+  );
+};
+ 
     
