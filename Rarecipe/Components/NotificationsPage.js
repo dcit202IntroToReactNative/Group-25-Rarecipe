@@ -112,6 +112,25 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
       },
+      activeButtonText: {
+        color: '#128',
+      },
+      categoryContainer: {
+        flex: 1,
+      },
+      category: {
+        flex: 1,
+        marginBottom: 20,
+      },
+      categoryTitle: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginBottom: 10,
+      },
+      notificationList: {
+        flexGrow: 1,
+      },
 });
 
 export default NotificationsView;
