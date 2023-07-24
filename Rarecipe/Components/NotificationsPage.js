@@ -85,6 +85,22 @@ const NotificationsView = () => {
     </View>
   );
 };
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      padding: 20,
+      backgroundColor: '#fff',
+    },
+    buttonsContainer: {
+      flexDirection: 'row',
+      justifyContent: 'center',
+      marginVertical: 10,
+      zIndex: 1, // Set a higher zIndex to keep the buttons above the notifications
+      position: 'sticky',
+      top: 0,
+      backgroundColor: '#fff', // Add background color to the header to avoid overlapping with notifications
+    },
+});
 
 export default NotificationsView;
  
