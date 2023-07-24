@@ -4,11 +4,11 @@ import TrendingFoodItemLayout from './trendingFoodItemLayout';
 import trendingData from '../../trending_foods.json'; // Replace with your JSON data
 import Ic_more from "../../assets/ic_arrow_right.svg";
 
-const TrendingSection = () => {
+const RecentSection = () => {
     return (
         <View style={styles.container}>
             <View style={styles.firstRow}>
-                <Text style={styles.trendingSectionText}>Trending now 🔥</Text>
+                <Text style={styles.trendingSectionText}>Recent recipes</Text>
                 <View style={styles.seeAllView}>
                     <Text style={styles.seeAllText}>See All</Text>
                     <Ic_more style={styles.moreIcon} />
@@ -59,4 +59,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default TrendingSection;
+export default RecentSection;
