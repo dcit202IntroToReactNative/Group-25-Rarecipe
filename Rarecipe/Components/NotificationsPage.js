@@ -85,5 +85,7 @@ const NotificationsView = () => {
     </View>
   );
 };
+
+export default NotificationsView;
  
     
