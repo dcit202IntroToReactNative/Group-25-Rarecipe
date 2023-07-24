@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import FacebookIcon from '../assets/facebook_icon.svg';
 import GoogleIcon from '../assets/google-svg.svg';
-import '../assets/fonts/Poppins-Light.ttf';
+
 const CreateAccountPage = () => {
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
@@ -46,6 +46,7 @@ const CreateAccountPage = () => {
                 placeholder="Enter your name"
                 value={fullName}
                 onChangeText={setFullName}
+                // Other TextInput props as needed
             />
 
             <Text style={{ fontFamily: 'poppins_light', color: '#000000', marginTop: 24 }}>
@@ -63,6 +64,7 @@ const CreateAccountPage = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChangeText={setEmail}
+                // Other TextInput props as needed
             />
 
             <Text style={{ fontFamily: 'poppins_light', color: '#000000', marginTop: 24 }}>
@@ -81,6 +83,7 @@ const CreateAccountPage = () => {
                 value={password}
                 onChangeText={setPassword}
                 secureTextEntry
+                // Other TextInput props as needed
             />
 
             <Text style={{ fontFamily: 'poppins_light', color: '#000000', marginTop: 24 }}>
@@ -99,45 +102,48 @@ const CreateAccountPage = () => {
                 value={confirmPassword}
                 onChangeText={setConfirmPassword}
                 secureTextEntry
+                // Other TextInput props as needed
             />
 
-            {/* Re-implemented Checkbox */}
-            <TouchableOpacity
-                style={{
-                    width: 17,
-                    height: 17,
-                    flexShrink: 0,
-                    borderRadius: 5,
-                    borderWidth: 1,
-                    borderColor: isChecked ? '#562244FF' : '#FF9C00', // Change border color based on state
-                    backgroundColor: isChecked ? '#562244FF' : '#FFF', // Change background color based on state
-                    marginRight: 8,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}
-                onPress={() => setChecked(!isChecked)}
-            >
-                {isChecked && (
-                    <View
-                        style={{
-                            width: 17,
-                            height: 17,
-                            borderRadius: 5,
-                            backgroundColor: '#562244FF',
-                        }}
-                    />
-                )}
-            </TouchableOpacity>
-            <Text style={{
-                fontFamily: 'Poppins',
-                fontSize: 11,
-                fontWeight: '400',
-                lineHeight: 17,
-                color: '#FF9C00',
-                textAlign: 'center',
-            }}>
-                Accept terms & Conditions
-            </Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
+                {/* Re-implemented Checkbox */}
+                <TouchableOpacity
+                    style={{
+                        width: 17,
+                        height: 17,
+                        flexShrink: 0,
+                        borderRadius: 5,
+                        borderWidth: 1,
+                        borderColor: isChecked ? '#562244FF' : '#FF9C00', // Change border color based on state
+                        backgroundColor: isChecked ? '#562244FF' : '#FFF', // Change background color based on state
+                        marginRight: 8,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}
+                    onPress={() => setChecked(!isChecked)}
+                >
+                    {isChecked && (
+                        <View
+                            style={{
+                                width: 9,
+                                height: 9,
+                                borderRadius: 2,
+                                backgroundColor: '#FFF',
+                            }}
+                        />
+                    )}
+                </TouchableOpacity>
+                <Text style={{
+                    fontFamily: 'Poppins',
+                    fontSize: 11,
+                    fontWeight: '400',
+                    lineHeight: 17,
+                    color: '#FF9C00',
+                    textAlign: 'center',
+                }}>
+                    Accept terms & Conditions
+                </Text>
+            </View>
 
             {/* Horizontal arrangement of Google and Facebook icons */}
             <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
