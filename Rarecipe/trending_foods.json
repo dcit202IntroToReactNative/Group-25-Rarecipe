@@ -1,0 +1,22 @@
+{
+  "foodItems": [
+    {
+      "name": "Fried Milk",
+      "imageUrl": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/10/44/84/TRDdT2afR9yGQxeJHqaE_fm.jpg",
+      "creatorName": "Bayou Mimi",
+      "creatorImageUrl": "https://images.unsplash.com/photo-1687360441023-286ce1b5da0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=654&q=80"
+    },
+    {
+      "name": "Frog Legs",
+      "imageUrl": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/37/36/81/picXJqO53.jpg",
+      "creatorName": "Justin Bieber",
+      "creatorImageUrl": "https://images.unsplash.com/photo-1604072366595-e75dc92d6bdc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+    },
+    {
+      "name": "Alligator Bites",
+      "imageUrl": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/37/35/89/pice0Gozt.jpg",
+      "creatorName": "Brice Palmer",
+      "creatorImageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80"
+    }
+  ]
+}

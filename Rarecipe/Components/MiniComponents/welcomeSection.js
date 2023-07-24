@@ -82,8 +82,8 @@ const styles = StyleSheet.create({
     searchIcon: {
         alignSelf: "center",
         marginEnd: 10,
-        width: 20,
-        height: 20,
+        width: 30,
+        height: 30,
     },
     searchInput: {
         width: '75%',
