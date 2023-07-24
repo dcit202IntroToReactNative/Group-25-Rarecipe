@@ -5,6 +5,7 @@ import TrendingSection from './MiniComponents/trendingSection';
 import PopularCategory from './MiniComponents/popularCategory';
 import PopularCreators from './MiniComponents/popularCreators';
 import RecentSection from './MiniComponents/recentSection';
+import NavigationBar from './MiniComponents/NavigationBar';
 
 const HomeLayout = () => {
     return (
@@ -15,6 +16,7 @@ const HomeLayout = () => {
             <RecentSection />
             <PopularCreators />
         </ScrollView>
+        <NavigationBar />
     );
 };
 
