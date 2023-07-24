@@ -4,6 +4,11 @@ import Ic_filter from "../../assets/ic_filter.svg";
 import Ic_search from "../../assets/ic_search.svg";
 
 class WelcomeSection extends Component {
+
+     handleSearch = () => {
+        this.props.navigation.navigate('SearchPage');
+    };
+
     render() {
         return (
             <View style={styles.container}>
