@@ -30,18 +30,19 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
         marginTop: 20,
     },
-    trendingSectionText: {
-        fontSize: 25,
-        fontWeight: 'bold',
-        color: '#333',
-        marginHorizontal: 12,
-    },
     firstRow: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignContent: 'center',
         alignItems: 'center',
         marginBottom: 12,
+        marginStart: 10,
+    },
+    trendingSectionText: {
+        fontSize: 25,
+        fontWeight: 'bold',
+        color: '#333',
+        marginHorizontal: 12,
     },
     seeAllView: {
         flexDirection: 'row',
@@ -54,8 +55,8 @@ const styles = StyleSheet.create({
         marginTop: 12,
     },
     moreIcon: {
-        marginTop: 12,
-        marginHorizontal: 12,
+        marginTop: 10,
+        marginHorizontal: 4,
     }
 });
 

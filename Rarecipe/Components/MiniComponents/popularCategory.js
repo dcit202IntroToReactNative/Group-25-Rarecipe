@@ -51,10 +51,11 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
     },
     popularCategoryText: {
-        fontSize: 18,
+        fontSize: 25,
         fontWeight: 'bold',
         color: '#333',
         marginHorizontal: 12,
+        marginStart: 20,
     },
     filterButtonsScrollView: {
         marginTop: 12,
@@ -72,7 +73,6 @@ const styles = StyleSheet.create({
     },
     filterButtonText: {
         fontSize: 16,
-        fontWeight: 'bold',
         color: '#333',
     },
     activeFilterButtonText: {

@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#333',
         marginHorizontal: 12,
+        marginStart: 20,
     },
     firstRow: {
         flexDirection: 'row',
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
     },
     moreIcon: {
         marginTop: 12,
-        marginHorizontal: 12,
+        marginHorizontal: 4,
     }
 });
 

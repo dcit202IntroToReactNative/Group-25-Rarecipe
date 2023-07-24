@@ -30,11 +30,14 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#333',
         marginTop: 8,
+        marginStart: 10,
     },
     creatorContainer: {
         flexDirection: 'row',
         alignItems: 'center',
         marginTop: 4,
+        marginStart: 10,
+
     },
     profileImage: {
         width: 40,

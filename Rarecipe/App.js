@@ -1,12 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import WelcomeSection from "./Components/MiniComponents/welcomeSection";
-import TrendingSection from "./Components/MiniComponents/trendingSection";
-import PopularCategorySection from "./Components/MiniComponents/popularCategory";
-
+import HomeLayout from "./Components/HomePage";
 export default function App() {
   return (
-    <TrendingSection />
+    <HomeLayout />
   );
 }
 
