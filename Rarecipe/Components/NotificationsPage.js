@@ -29,4 +29,25 @@ const NotificationsView = () => {
       const handleButtonPress = (button) => {
         setActiveButton(button);
       };
+      const screenWidth = Dimensions.get('window').width;
+  const buttonWidth = (screenWidth - 60) / 10;
+
+  let notificationDataToShow;
+  let categoryText;
+  let categoryTextColor;
+
+  if (activeButton === 'unread') {
+    notificationDataToShow = newNotifications;
+    categoryText = 'New Notifications';
+    categoryTextColor = '#128'; // Black text color for the active button
+  } else if (activeButton === 'read') {
+    notificationDataToShow = olderNotifications;
+    categoryText = 'Older Notifications';
+    categoryTextColor = '#128'; // Black text color for the active button
+  } else {
+    notificationDataToShow = notifications;
+    categoryText = 'All Notifications';
+    categoryTextColor = '#128'; // White text color for other buttons
+  }
+
     
