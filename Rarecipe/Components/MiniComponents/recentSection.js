@@ -28,7 +28,7 @@ const RecentSection = () => {
 const styles = StyleSheet.create({
     container: {
         paddingVertical: 12,
-        marginTop: 20,
+        marginTop: 10,
     },
     trendingSectionText: {
         fontSize: 25,
