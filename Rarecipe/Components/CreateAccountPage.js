@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TextInput, TouchableOpacity, CheckBox, Button} from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, CheckBox, Button } from 'react-native';
 
 const CreateAccountPage = () => {
     const handleSignUp = () => {
@@ -15,11 +15,11 @@ const CreateAccountPage = () => {
                 Create an account
             </Text>
 
-            <Text style={{ fontFamily: 'poppins_light', color: '#121212', fontSize: 14, width: 190, marginTop: 4 }}>
+            <Text style={{ fontFamily: 'poppins_light', color: '#505050', fontSize: 14, width: 190, marginTop: 4 }}>
                 Let's help you set up your account, it won't take long.
             </Text>
 
-            <Text style={{ fontFamily: 'poppins_light', color: '#000000' }}>
+            <Text style={{ fontFamily: 'poppins_light', color: '#676767', paddingTop:8 }}>
                 Full Name
             </Text>
             <TextInput
@@ -32,10 +32,11 @@ const CreateAccountPage = () => {
                     marginTop: 10,
                 }}
                 placeholder="Enter your name"
+                placeholderTextColor="#D9D9D9" // Updated hint text color
                 // Other TextInput props as needed
             />
 
-            <Text style={{ fontFamily: 'poppins_light', color: '#000000', marginTop: 24 }}>
+            <Text style={{ fontFamily: 'poppins_light', color: '#676767', marginTop: 24 }}>
                 Email
             </Text>
             <TextInput
@@ -48,10 +49,11 @@ const CreateAccountPage = () => {
                     marginTop: 10,
                 }}
                 placeholder="Enter your email"
+                placeholderTextColor="#D9D9D9" // Updated hint text color
                 // Other TextInput props as needed
             />
 
-            <Text style={{ fontFamily: 'poppins_light', color: '#000000', marginTop: 24 }}>
+            <Text style={{ fontFamily: 'poppins_light', color: '#676767', marginTop: 24 }}>
                 Password
             </Text>
             <TextInput
@@ -65,10 +67,11 @@ const CreateAccountPage = () => {
                 }}
                 placeholder="Create password"
                 secureTextEntry
+                placeholderTextColor="#D9D9D9" // Updated hint text color
                 // Other TextInput props as needed
             />
 
-            <Text style={{ fontFamily: 'poppins_light', color: '#000000', marginTop: 24 }}>
+            <Text style={{ fontFamily: 'poppins_light', color: '#676767', marginTop: 24 }}>
                 Confirm Password
             </Text>
             <TextInput
@@ -82,11 +85,12 @@ const CreateAccountPage = () => {
                 }}
                 placeholder="Re-enter password"
                 secureTextEntry
+                placeholderTextColor="#D9D9D9" // Updated hint text color
                 // Other TextInput props as needed
             />
 
             <CheckBox
-                style={{ width: 237, height: 32, marginTop: 8 }}
+                style={{ width: 20, height: 20, marginTop: 8 }}
                 // Other CheckBox props as needed
             />
 
@@ -100,28 +104,20 @@ const CreateAccountPage = () => {
                 onPress={handleSignUp}
             >
                 <Text style={{ fontFamily: 'poppins_semibold', color: '#FFFFFF', textAlign: 'center', fontSize: 16 }}>
-                    Sign Up
+                    Sign Up   ➜
                 </Text>
             </TouchableOpacity>
 
-            <Text style={{ fontFamily: 'poppins_light', color: '#C5C4C4', marginTop: 10 }}>
-                Or
-            </Text>
-
             <Button
                 title="Sign in with Facebook"
-                onPress={() => {}}
+                onPress={() => { }}
                 color="#FFFFFF"
                 // Other Button props as needed
             />
 
-            <Text style={{ fontFamily: 'poppins_light', color: '#C5C4C4', marginTop: 10 }}>
-                Or
-            </Text>
-
             <Button
                 title="Sign in with Google"
-                onPress={() => {}}
+                onPress={() => { }}
                 color="#FFFFFF"
                 // Other Button props as needed
             />
