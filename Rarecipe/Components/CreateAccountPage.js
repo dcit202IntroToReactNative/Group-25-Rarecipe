@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, CheckBox, Button } from 'react-native';
-
+import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
+import FacebookIcon from '../assets/facebook_icon.svg';
+import GoogleIcon from '../assets/google-svg.svg';
+import '../assets/fonts/Poppins-Light.ttf';
 const CreateAccountPage = () => {
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
@@ -14,9 +16,14 @@ const CreateAccountPage = () => {
         // You can use navigation libraries like React Navigation
     };
 
+    const handleSignIn = () => {
+        // Handle the action when "Sign In" is clicked
+        // For example, navigate to the sign-in page
+    };
+
     return (
         <View style={{ flex: 1, backgroundColor: '#FFFFFF', padding: 16 }}>
-            <Text style={{ fontFamily: 'poppins_semibold', color: '#000000', fontSize: 24, fontWeight: 'bold', marginTop: 24 }}>
+            <Text style={{ fontFamily: 'poppins_semibold', color: '#494949', fontSize: 24, fontWeight: 'bold', marginTop: 24 }}>
                 Create an account
             </Text>
 
@@ -39,7 +46,6 @@ const CreateAccountPage = () => {
                 placeholder="Enter your name"
                 value={fullName}
                 onChangeText={setFullName}
-                // Other TextInput props as needed
             />
 
             <Text style={{ fontFamily: 'poppins_light', color: '#000000', marginTop: 24 }}>
@@ -57,7 +63,6 @@ const CreateAccountPage = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChangeText={setEmail}
-                // Other TextInput props as needed
             />
 
             <Text style={{ fontFamily: 'poppins_light', color: '#000000', marginTop: 24 }}>
@@ -76,7 +81,6 @@ const CreateAccountPage = () => {
                 value={password}
                 onChangeText={setPassword}
                 secureTextEntry
-                // Other TextInput props as needed
             />
 
             <Text style={{ fontFamily: 'poppins_light', color: '#000000', marginTop: 24 }}>
@@ -95,26 +99,81 @@ const CreateAccountPage = () => {
                 value={confirmPassword}
                 onChangeText={setConfirmPassword}
                 secureTextEntry
-                // Other TextInput props as needed
             />
 
+            {/* Re-implemented Checkbox */}
+            <TouchableOpacity
+                style={{
+                    width: 17,
+                    height: 17,
+                    flexShrink: 0,
+                    borderRadius: 5,
+                    borderWidth: 1,
+                    borderColor: isChecked ? '#562244FF' : '#FF9C00', // Change border color based on state
+                    backgroundColor: isChecked ? '#562244FF' : '#FFF', // Change background color based on state
+                    marginRight: 8,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
+                onPress={() => setChecked(!isChecked)}
+            >
+                {isChecked && (
+                    <View
+                        style={{
+                            width: 17,
+                            height: 17,
+                            borderRadius: 5,
+                            backgroundColor: '#562244FF',
+                        }}
+                    />
+                )}
+            </TouchableOpacity>
+            <Text style={{
+                fontFamily: 'Poppins',
+                fontSize: 11,
+                fontWeight: '400',
+                lineHeight: 17,
+                color: '#FF9C00',
+                textAlign: 'center',
+            }}>
+                Accept terms & Conditions
+            </Text>
+
+            {/* Horizontal arrangement of Google and Facebook icons */}
             <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
-                <CheckBox
-                    style={{
-                        width: 17,
-                        height: 17,
-                        flexShrink: 0,
-                        borderRadius: 5,
-                        borderWidth: 1,
-                        borderColor: '#FF9C00', // Updated border color
-                        backgroundColor: '#FFF',
-                        marginRight: 8,
-                    }}
-                    value={isChecked}
-                    onValueChange={setChecked}
-                />
-                <Text style={{ fontFamily: 'poppins_light', color: '#FF9C00' }}>Accept terms & Conditions</Text>
+                <TouchableOpacity style={styles.iconButton} onPress={() => { /* Handle Google sign-in */ }}>
+                    <Image source={GoogleIcon} style={styles.icon} />
+                </TouchableOpacity>
+
+                <View style={{ width: 5 }} /> {/* 5px space between icons */}
+
+                <TouchableOpacity style={styles.iconButton} onPress={() => { /* Handle Facebook sign-in */ }}>
+                    <Image source={FacebookIcon} style={styles.icon} />
+                </TouchableOpacity>
             </View>
+
+            <TouchableOpacity onPress={handleSignIn} style={{ marginTop: 10 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Text style={{
+                        fontFamily: 'Poppins',
+                        fontSize: 11,
+                        fontWeight: '500',
+                        lineHeight: 17,
+                        color: '#000', // Updated text color for "Already a member?"
+                    }}>
+                        Already a member?
+                    </Text>
+                    <Text style={{
+                        fontFamily: 'Poppins',
+                        fontSize: 11,
+                        fontWeight: '500',
+                        lineHeight: 17,
+                        color: '#FF9C00', // Updated text color for "Sign In"
+                    }} onPress={handleSignIn}>
+                        Sign In
+                    </Text>
+                </View>
+            </TouchableOpacity>
 
             <TouchableOpacity
                 style={{
@@ -129,30 +188,29 @@ const CreateAccountPage = () => {
                     Sign Up
                 </Text>
             </TouchableOpacity>
-
-            <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
-                <View style={{ width: 50, height: 1, backgroundColor: '#D9D9D9' }} />
-                <Text style={{ fontFamily: 'poppins_light', color: '#C5C4C4', marginHorizontal: 8 }}>
-                    or Sign in With
-                </Text>
-                <View style={{ width: 50, height: 1, backgroundColor: '#D9D9D9' }} />
-            </View>
-
-            <Button
-                title="Sign in with Facebook"
-                onPress={() => { }}
-                color="#FFFFFF"
-                // Other Button props as needed
-            />
-
-            <Button
-                title="Sign in with Google"
-                onPress={() => { }}
-                color="#FFFFFF"
-                // Other Button props as needed
-            />
         </View>
     );
 };
 
 export default CreateAccountPage;
+
+const styles = {
+    iconButton: {
+        marginLeft: 35,
+        width: 44,
+        height: 44,
+        flexShrink: 0,
+        borderRadius: 10,
+        backgroundColor: '#FFF',
+        shadowColor: 'rgba(105, 105, 105, 0.10)',
+        shadowOffset: { width: 0, height: 0 },
+        shadowOpacity: 1,
+        shadowRadius: 5,
+        elevation: 3,
+    },
+    icon: {
+        width: 44,
+        height: 44,
+        borderRadius: 10,
+    },
+};
