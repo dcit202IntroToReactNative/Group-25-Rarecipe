@@ -2,26 +2,28 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View, TextInput, Image, TouchableOpacity } from "react-native";
 import Ic_filter from "../../assets/ic_filter.svg";
 import Ic_search from "../../assets/ic_search.svg";
+import { useNavigation } from "@react-navigation/native";
 
-class WelcomeSection extends Component {
+const WelcomeSection = () => {
+    const navigation = useNavigation();
 
-     handleSearch = () => {
-        this.props.navigation.navigate('SearchPage');
+    const handleSearchBarClick = () => {
+        navigation.navigate("SearchPage");
     };
 
-    render() {
-        return (
-            <View style={styles.container}>
-                <View style={styles.firstRow}>
-                    <View style={styles.greetingsContainer}>
-                        <Text style={styles.greeting}>Hello Denna,</Text>
-                        <Text style={styles.greeting2}>What are you cooking today?</Text>
-                    </View>
-                    <Image
-                        style={styles.profileImage}
-                        source={require("../../assets/profile_photo.jpeg")}
-                    />
+    return (
+        <View style={styles.container}>
+            <View style={styles.firstRow}>
+                <View style={styles.greetingsContainer}>
+                    <Text style={styles.greeting}>Hello Denna,</Text>
+                    <Text style={styles.greeting2}>What are you cooking today?</Text>
                 </View>
+                <Image
+                    style={styles.profileImage}
+                    source={require("../../assets/profile_photo.jpeg")}
+                />
+            </View>
+            <TouchableOpacity onPress={handleSearchBarClick}>
                 <View style={styles.secondRow}>
                     <View style={styles.searchInputContainer}>
                         <Ic_search style={styles.searchIcon} />
@@ -37,10 +39,11 @@ class WelcomeSection extends Component {
                         <Ic_filter style={styles.filterIcon} />
                     </TouchableOpacity>
                 </View>
-            </View>
-        );
-    }
-}
+            </TouchableOpacity>
+        </View>
+    );
+};
+
 
 const styles = StyleSheet.create({
     container: {
