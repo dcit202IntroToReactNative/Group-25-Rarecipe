@@ -7,6 +7,14 @@ const NotificationsView = () => {
       { id: '2', title: 'Vanecia commented under your post', read: true },
       { id: '3', title: 'Justice liked your post', read: false },
       { id: '4', title: 'Delicious delicacies for you to choose from, you will love it', read: false },
+      { id: '5', title: 'Helina shared a post', read: true },
+      { id: '6', title: 'Hot meals for you today, finger-licking good', read: true },
+      { id: '7', title: 'Goodmorning, we have new recipe ideas for you', read: false },
+      { id: '8', title: 'Vanecia commented under your post', read: true },
+      { id: '9', title: 'Peter liked your post', read: false },
+      { id: '10', title: 'Delicious delicacies for you to choose from, you will love it', read: false },
+      { id: '11', title: 'Johnson shared a post', read: true },
+      { id: '12', title: 'Cool meals for you today, finger-licking good', read: true },
       ]);
       const [activeButton, setActiveButton] = useState('all');
 
