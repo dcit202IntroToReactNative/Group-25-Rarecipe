@@ -1,25 +1,31 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Text, Platform } from 'react-native';
+import Ic_Home from "../../assets/ic_home.svg";
+import Ic_Bookmark from "../../assets/ic_bookmark.svg";
+import Ic_Profile from "../../assets/ic_profile.svg";
+import Ic_Search from "../../assets/ic_search.svg";
+import Ic_Notification from "../../assets/ic_notification.svg";
+
 
 const NavigationBar = () => {
   return (
     <View style={styles.container}>
       {/* Four buttons */}
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>aaa</Text>
+        <Ic_Home style={styles.IcHome}/>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>bbb</Text>
+        <Ic_Bookmark style={styles.IcBookmark}/>
       </TouchableOpacity>
       {/* Floating button */}
       <TouchableOpacity style={styles.floatingButton}>
-        <Text style={styles.floatingButtonText}>ccc</Text>
+        <Ic_Search style={styles.IcSearch}/>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>ddd</Text>
+        <Ic_Notification style={styles.IcNotification}/>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>eee</Text>
+        <Ic_Profile style={styles.IcProfile}/>
       </TouchableOpacity>
     </View>
   );
@@ -59,7 +65,7 @@ const styles = StyleSheet.create({
   },
   floatingButton: {
     backgroundColor: '#772F5E',
-    borderRadius: 50,
+    borderRadius: 70,
     padding: 15,
     bottom: 40,
     marginHorizontal: -25,
