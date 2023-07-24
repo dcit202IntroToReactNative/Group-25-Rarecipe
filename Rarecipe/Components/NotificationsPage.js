@@ -131,6 +131,17 @@ const styles = StyleSheet.create({
       notificationList: {
         flexGrow: 1,
       },
+      notificationItem: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingVertical: 10,
+        borderBottomWidth: 1,
+        borderColor: '#ccc',
+      },
+      notificationIcon: {
+        marginRight: 10,
+      },
 });
 
 export default NotificationsView;
